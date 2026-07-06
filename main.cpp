@@ -1,6 +1,7 @@
 #include <iostream>
 #include <random>
 #include "random_number.h"
+#include "read_valid_int.h"
 
 using std::cin;
 using std::cout;
@@ -15,11 +16,10 @@ int main()
     int end{};
 
     cout << "start number: ";
-    cin >> start;
+    start = read_valid_int(start);
 
     cout << "end number: ";
-    cin >> end;
-    cout << "\n";
+    end = read_valid_int(end);
 
     int random_num{random_number(start, end)};
 
@@ -28,7 +28,7 @@ int main()
     while (true)
     {
         cout << "Guess the number: ";
-        cin >> guessing_number;
+        guessing_number = read_valid_int(guessing_number);
 
         if (guessing_number == random_num)
         {

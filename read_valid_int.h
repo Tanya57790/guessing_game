@@ -1,0 +1,1 @@
+int read_valid_int(int);
