@@ -1,6 +1,7 @@
 #include <iostream>
 #include <limits>
 #include "generate_random_number.h"
+#include "read_valid_int.h"
 
 using std::cin;
 using std::cout;
@@ -11,7 +12,9 @@ int get_valid_range(int start, int end)
     while (start >= end)
     {
         cout << "\nError! Enter the range numbers (example: 1 50): ";
-        cin >> start >> end;
+
+        start = read_valid_int(start);
+        end = read_valid_int(end);
     }
 
     return generate_random_number(start, end);
