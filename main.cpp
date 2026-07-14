@@ -1,8 +1,6 @@
 #include <iostream>
-#include <random>
-#include "generate_random_number.h"
-#include "get_valid_range.h"
 #include "read_valid_int.h"
+#include "get_range.h"
 #include "print_attempts_result.h"
 
 using std::cin;
@@ -12,20 +10,20 @@ using std::endl;
 int main()
 {
     cout << "Welcome to Guessing game!\n\n";
-    cout << "Specify a range of numbers\n";
 
+    cout << "Choice the game difficulty in menu from 1 to 4\n\n";
+
+    cout << "1. Easy: 1-50" << endl;
+    cout << "2. Average: 1-200" << endl;
+    cout << "3. Hard: 1-500" << endl;
+    cout << "4. Custom: your range\n\n";
+
+    int game_difficulty{};
     int attempts{};
 
-    int start{};
-    int end{};
+    cout << "Choice the game difficulty: ";
 
-    cout << "start number: ";
-    start = read_valid_int(start);
-
-    cout << "end number: ";
-    end = read_valid_int(end);
-
-    int random_num = get_valid_range(start, end);
+    int random_num = get_range(game_difficulty);
 
     int guessing_number{};
 
