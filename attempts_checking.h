@@ -1,1 +1,0 @@
-int attempts_checking(int);

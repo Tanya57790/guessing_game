@@ -3,7 +3,7 @@
 using std::cout;
 using std::endl;
 
-int attempts_checking(int attempts)
+int print_attempts_result(int attempts)
 {
     if (attempts <= 5)
     {

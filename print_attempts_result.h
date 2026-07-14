@@ -1,0 +1,1 @@
+int print_attempts_result(int);

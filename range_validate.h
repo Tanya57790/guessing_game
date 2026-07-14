@@ -1,1 +1,0 @@
-int range_validate(int, int);

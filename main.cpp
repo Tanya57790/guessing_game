@@ -1,9 +1,9 @@
 #include <iostream>
 #include <random>
-#include "random_number.h"
-#include "range_validate.h"
+#include "generate_random_number.h"
+#include "get_valid_range.h"
 #include "read_valid_int.h"
-#include "attempts_checking.h"
+#include "print_attempts_result.h"
 
 using std::cin;
 using std::cout;
@@ -25,7 +25,7 @@ int main()
     cout << "end number: ";
     end = read_valid_int(end);
 
-    int random_num = range_validate(start, end);
+    int random_num = get_valid_range(start, end);
 
     int guessing_number{};
 
@@ -37,7 +37,7 @@ int main()
         if (guessing_number == random_num)
         {
             cout << "You win!" << endl;
-            cout << "You guessed it in " << attempts << " tries. " << attempts_checking(attempts) << endl;
+            cout << "You guessed it in " << attempts << " tries. " << print_attempts_result(attempts) << endl;
             break;
         }
         else if (guessing_number <= random_num)

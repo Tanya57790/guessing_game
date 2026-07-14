@@ -1,0 +1,1 @@
+int get_valid_range(int, int);

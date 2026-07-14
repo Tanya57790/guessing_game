@@ -1,7 +1,7 @@
 #include <iostream>
 #include <random>
 
-int random_number(int start, int end)
+int generate_random_number(int start, int end)
 {
     std::random_device rd;
     std::mt19937 gen(rd());

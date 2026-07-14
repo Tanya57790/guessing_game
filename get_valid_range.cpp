@@ -1,12 +1,12 @@
 #include <iostream>
 #include <limits>
-#include "random_number.h"
+#include "generate_random_number.h"
 
 using std::cin;
 using std::cout;
 using std::endl;
 
-int range_validate(int start, int end)
+int get_valid_range(int start, int end)
 {
     while (start >= end)
     {
@@ -14,5 +14,5 @@ int range_validate(int start, int end)
         cin >> start >> end;
     }
 
-    return random_number(start, end);
+    return generate_random_number(start, end);
 }
